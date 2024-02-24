@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx685xxj6gr6u"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy.cs" id="1_biyme"]
+[ext_resource type="Script" path="res://Scripts/SquadManager.cs" id="2_yupul"]
+
+[node name="Enemy Squad" type="Node3D"]
+script = ExtResource("1_biyme")
+
+[node name="SquadSpawner" type="Node3D" parent="."]
+script = ExtResource("2_yupul")
+res = "res://Scenes/RedGuy.tscn"

@@ -7,7 +7,6 @@
 [node name="Root" type="Node3D"]
 
 [node name="Floor Spawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0230036, 4.76837e-07, -0.120022)
 script = ExtResource("1_cp7ow")
 
 [node name="Squad" type="Node3D" parent="."]

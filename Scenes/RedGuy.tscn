@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://rh1jj1hhd8qc"]
+
+[ext_resource type="Script" path="res://Scripts/EnemyStatus.cs" id="1_r4n62"]
+[ext_resource type="PackedScene" uid="uid://ugh07746uf82" path="res://Assets/BlueGuy.fbx" id="1_s4xwd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4101"]
+albedo_color = Color(0.615686, 0, 0.129412, 1)
+clearcoat = 0.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a6arl"]
+height = 1.50795
+radius = 0.568505
+
+[node name="Red Guys Soul" type="RigidBody3D" groups=["Enemy"]]
+can_sleep = false
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_r4n62")
+
+[node name="Red Dude" parent="." instance=ExtResource("1_s4xwd")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00444442, 0, -0.00680307)
+
+[node name="Human" parent="Red Dude/RootNode" index="0"]
+material_override = SubResource("StandardMaterial3D_u4101")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Enemy"]]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00285565, 0.149957, 0.00195409)
+shape = SubResource("CylinderShape3D_a6arl")
+
+[editable path="Red Dude"]

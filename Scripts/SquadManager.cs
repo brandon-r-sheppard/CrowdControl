@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public partial class SquadManager : Node
 {
+	[Export]
+	string res = "res://Scenes/BlueGuy.tscn";
 	private PackedScene character;
 	
 	// Adjust the radius increment to control spacing between the characters
@@ -14,7 +16,7 @@ public partial class SquadManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		character = GD.Load<PackedScene>("res://Scenes/BlueGuy.tscn");
+		character = GD.Load<PackedScene>(res);
 		AddAlly();
 	}
 
