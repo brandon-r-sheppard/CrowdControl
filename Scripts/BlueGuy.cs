@@ -17,6 +17,7 @@ public partial class BlueGuy : RigidBody3D
 	
 	public void _on_body_entered(Node body)
 	{
+		
 		if (collided) {
 			return;
 		}

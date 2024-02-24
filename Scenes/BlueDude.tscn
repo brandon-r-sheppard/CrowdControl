@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bogp6yj2m1ise"]
+
+[ext_resource type="Script" path="res://Scripts/BlueGuy.cs" id="1_hmdg8"]
+[ext_resource type="PackedScene" uid="uid://bywbfmuhlr5lq" path="res://Scenes/NewBlueGuy.tscn" id="2_tmlxf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c2nhq"]
+height = 0.305063
+radius = 0.0631067
+
+[node name="BlueDude" type="RigidBody3D" groups=["Player"]]
+can_sleep = false
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_hmdg8")
+
+[node name="NewBlueGuy" parent="." instance=ExtResource("2_tmlxf")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.153373, 0.01545)
+shape = SubResource("CylinderShape3D_c2nhq")

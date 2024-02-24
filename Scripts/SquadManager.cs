@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public partial class SquadManager : Node
 {
 	[Export]
-	string res = "res://Scenes/BlueGuy.tscn";
+	string res = "res://Scenes/BlueDude.tscn";
 	private PackedScene character;
 	
 	// Adjust the radius increment to control spacing between the characters

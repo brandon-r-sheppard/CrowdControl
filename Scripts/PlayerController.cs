@@ -5,7 +5,7 @@ public partial class PlayerController : Node3D
 {
 	// Speed at which the camera moves
 	public float MoveSpeed = 100f;
-	public float RunSpeed = 2f;
+	public float RunSpeed = 4f;
 	public float Limit = 2f;
 
 	public override void _Ready()

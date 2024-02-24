@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://bywbfmuhlr5lq"]
+
+[ext_resource type="PackedScene" uid="uid://40gfvmmmxcvx" path="res://Assets/BlueGuy.glb" id="1_h5sh5"]
+[ext_resource type="Script" path="res://Scripts/RunAnimation.cs" id="2_fmr05"]
+
+[node name="NewBlueGuy" instance=ExtResource("1_h5sh5")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(0.116389, 0.0887684, -0.00688128, 0.989205)
+bones/3/rotation = Quaternion(0.00432352, 0.0116456, -0.00621495, 0.999904)
+bones/4/rotation = Quaternion(0.164429, -0.0107143, -0.0103701, 0.986276)
+bones/7/rotation = Quaternion(0.640281, 0.371188, -0.537875, 0.403671)
+bones/8/rotation = Quaternion(0.219073, 0.260405, -0.20866, 0.916874)
+bones/9/rotation = Quaternion(0.00718205, -0.122111, 0.533648, 0.836814)
+bones/10/rotation = Quaternion(-0.0265166, -0.0502252, -0.0949194, 0.993863)
+bones/11/rotation = Quaternion(0.119578, 0.0864308, 0.227767, 0.962472)
+bones/12/rotation = Quaternion(0.031963, -0.0065271, -0.124565, 0.991675)
+bones/13/rotation = Quaternion(-0.0155394, 0.000630366, 0.0513513, 0.99856)
+bones/15/rotation = Quaternion(0.0803098, -0.00834685, 0.0361978, 0.996078)
+bones/16/rotation = Quaternion(0.125495, 1.58956e-05, -0.0156983, 0.99197)
+bones/17/rotation = Quaternion(0.0230657, 0.00120541, 0.0130959, 0.999647)
+bones/19/rotation = Quaternion(0.615613, -0.380088, 0.566481, 0.394528)
+bones/20/rotation = Quaternion(0.178233, 0.168392, -0.212932, 0.9458)
+bones/21/rotation = Quaternion(0.00687012, 0.141028, -0.616419, 0.774656)
+bones/22/rotation = Quaternion(-0.155433, 0.117173, 0.0478461, 0.979705)
+bones/23/rotation = Quaternion(0.119311, -0.0854783, -0.226218, 0.962956)
+bones/24/rotation = Quaternion(0.0202924, 0.00489009, 0.217908, 0.975746)
+bones/25/rotation = Quaternion(-0.0271186, -0.000701233, -0.131749, 0.990912)
+bones/27/rotation = Quaternion(0.0473283, 0.00856739, -0.0175223, 0.998689)
+bones/28/rotation = Quaternion(0.11694, -0.000294379, 0.00788936, 0.993108)
+bones/29/rotation = Quaternion(0.0368326, -0.000133505, -0.0184178, 0.999152)
+bones/31/rotation = Quaternion(0.0462201, 0.42384, 0.895232, -0.129549)
+bones/32/rotation = Quaternion(0.869285, 0.0239386, 0.0199978, -0.493327)
+bones/33/rotation = Quaternion(0.268492, -0.0896038, -0.000478796, 0.959105)
+bones/34/rotation = Quaternion(0.223574, 0.020461, -0.00158434, 0.974471)
+bones/36/rotation = Quaternion(0.0256773, 0.0669653, 0.997226, -0.019945)
+bones/37/rotation = Quaternion(-0.400026, 0.0176474, 0.00677584, 0.916309)
+bones/39/rotation = Quaternion(0.473887, 0.0436754, 0.0153587, 0.879368)
+
+[node name="AnimationPlayer" parent="." index="1"]
+script = ExtResource("2_fmr05")

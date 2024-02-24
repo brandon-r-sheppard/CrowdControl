@@ -8,4 +8,4 @@ script = ExtResource("1_biyme")
 
 [node name="SquadSpawner" type="Node3D" parent="."]
 script = ExtResource("2_yupul")
-res = "res://Scenes/RedGuy.tscn"
+res = "res://Scenes/RedDude.tscn"
