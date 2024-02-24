@@ -14,7 +14,7 @@ public partial class SquadManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		character = GD.Load<PackedScene>("res://blue_guy.tscn");
+		character = GD.Load<PackedScene>("res://Scenes/BlueGuy.tscn");
 		AddAlly();
 	}
 

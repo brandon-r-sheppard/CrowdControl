@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6ootty6eyqs2"]
+[gd_scene load_steps=6 format=3 uid="uid://c6ootty6eyqs2"]
 
-[ext_resource type="Script" path="res://GateSpawner.cs" id="1_je10f"]
 [ext_resource type="Script" path="res://Scripts/Gate.cs" id="2_m04gh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_kwuln"]
@@ -16,23 +15,22 @@ size = Vector3(0.766129, 17.4206, 0.00812149)
 
 [node name="Node3D" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.487, 0, 0, 0, 0.044, 0, 0, 0, 20, 0, 0, -10)
 mesh = SubResource("BoxMesh_kwuln")
 skeleton = NodePath("../../..")
-script = ExtResource("1_je10f")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+[node name="Area3D" type="Area3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0170016)
 script = ExtResource("2_m04gh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/Area3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/Area3D"]
 transform = Transform3D(0.764908, 0, 0, 0, 16.8731, 0, 0, 0, -0.00757374, 0, 8.4, 0)
 mesh = SubResource("BoxMesh_oo8u7")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Area3D"]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.000197997, 8.31247, -2.69115e-05)
 shape = SubResource("BoxShape3D_5n1ed")
 
-[connection signal="body_entered" from="MeshInstance3D/Area3D" to="MeshInstance3D/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Floor/Area3D" to="Floor/Area3D" method="_on_body_entered"]

@@ -13,7 +13,7 @@ public partial class RectangleSpawner : Node3D
 
 	public override void _Ready()
 	{
-		rectangleScene = GD.Load<PackedScene>("res://Rectangle.tscn");
+		rectangleScene = GD.Load<PackedScene>("res://Scenes/Rectangle.tscn");
 		var timer = new Timer();
 		AddChild(timer);
 		timer.WaitTime = spawnInterval;
