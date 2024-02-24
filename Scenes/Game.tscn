@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://di33bui0kexb"]
+
+[ext_resource type="Script" path="res://Scripts/RectangleSpawner.cs" id="1_cp7ow"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.cs" id="2_1xukr"]
+[ext_resource type="Script" path="res://Scripts/SquadManager.cs" id="3_h8b2a"]
+
+[node name="Root" type="Node3D"]
+
+[node name="Floor Spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0230036, 4.76837e-07, -0.120022)
+script = ExtResource("1_cp7ow")
+
+[node name="Squad" type="Node3D" parent="."]
+script = ExtResource("2_1xukr")
+
+[node name="SquadSpawner" type="Node3D" parent="Squad"]
+script = ExtResource("3_h8b2a")
+
+[node name="Camera3D" type="Camera3D" parent="Squad"]
+transform = Transform3D(-1, -1.24345e-14, 8.74228e-08, 6.02509e-08, 0.724581, 0.68919, -6.33449e-08, 0.68919, -0.724581, 0.00141859, 2.60064, -2.68086)
